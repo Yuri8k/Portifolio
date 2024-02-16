@@ -56,6 +56,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &.blur-header {
+      background-color: transparent;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1000%;
+        height: 100%;
+        background-color: hsla(0, 0%, 10%, 0.3);
+        backdrop-filter: blur(24px);
+        --webkit-backdrop-filter: blur(24px);
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+    }
   
     .nav {
       height: var(--header-height);

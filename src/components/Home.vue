@@ -10,16 +10,11 @@
           <h3 class="home__educatiion">Front-end Developer</h3>
 
           <h3 class="home__description">
-            Como desenvolvedor front-end, minha paixão é criar interfaces de usuário cativantes e
-            funcionais. Com habilidades em sass, javascript, bootstrap, VueJS, entre outros,
-            transformo designs em experiências interativas e responsivas. Trabalho em estreita
-            colaboração com designers e desenvolvedores back-end para garantir uma integração
-            perfeita entre o visual e a funcionalidade dos aplicativos web. Minha expertise inclui a
-            criação de layouts intuitivos, otimizados para diversos dispositivos e navegadores. Além
-            disso, estou sempre atualizado com as mais recentes tecnologias e tendências do setor
-            para oferecer soluções inovadoras que proporcionem uma experiência de usuário
-            excepcional. Com uma abordagem centrada no usuário e uma paixão pela excelência técnica,
-            busco constantemente superar expectativas e entregar resultados de alta qualidade.
+            Desenvolvedor front-end, criação de interfaces de usuário cativantes, funcionais e responsivas, utlizando sass, javascript, bootstrap, VueJS, entre outros.
+            <br>
+            Criação do front-end de mais de 50 lojas de e-commerce
+            <br>
+            Desenvolvimento de novas funcionalidades
           </h3>
 
           <a href="#contact" class="button">Vamos conversar</a>
@@ -130,20 +125,6 @@ main {
 
           .home__description {
             margin-block: 1rem 1.5rem;
-          }
-
-          .button {
-            display: inline-block;
-            background-color: var(--first-color);
-            padding: 1rem 1.75rem;
-            border-radius: 0.5rem;
-            color: var(--title-color);
-            font-weight: var(--font-medium);
-            transition: box-shaow 0.4s;
-
-            &:hover {
-              box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, 0.2);
-            }
           }
         }
 
