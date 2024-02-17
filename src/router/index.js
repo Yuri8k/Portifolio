@@ -8,23 +8,6 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      children: [
-        {
-          path: '/',
-          name: 'about',
-          component: HomeView
-        },
-        {
-          path: '/',
-          name: 'skills',
-          component: HomeView
-        },
-        {
-          path: '/',
-          name: 'services',
-          component: HomeView
-        }
-      ]
     },
   ]
 })

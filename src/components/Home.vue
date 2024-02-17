@@ -11,9 +11,9 @@
 
           <h3 class="home__description">
             Desenvolvedor front-end, criação de interfaces de usuário cativantes, funcionais e responsivas, utlizando sass, javascript, bootstrap, VueJS, entre outros.
-            <br>
+            <br><br>
             Criação do front-end de mais de 50 lojas de e-commerce
-            <br>
+            <br><br>
             Desenvolvimento de novas funcionalidades
           </h3>
 

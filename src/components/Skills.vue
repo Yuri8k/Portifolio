@@ -27,7 +27,7 @@
 
                 <ol class="skills__group" start="5">
                     <li class="skills__item">Git & GitHub</li>
-                    <li class="skills__item">Automação FRONT-END</li>
+                    <li class="skills__item">Automação <br> FRONT-END</li>
                 </ol>
             </div>
         </div>

@@ -1,0 +1,133 @@
+<template>
+    <section class="projects section" id="projects">
+        <h3 class="section__subtitle">
+            My <span>Jobs</span>
+        </h3>
+
+        <h2 class="section__title">
+            Recent Projects
+        </h2>
+
+        <div class="projects__container container grid">
+            <article class="projects__card">
+                <img src="../assets/img/project-img-1.jpg" alt="Animation Effects" class="projects__img">
+
+                <div class="projects__modal">
+                    <span class="projects__subtitle">Web</span>
+
+                    <h2 class="projects__title">Modern Animations</h2>
+
+                    <a href="https://yuri8k.github.io/Animation-Effects/?=987123" class="projects__button">
+                        View Demo <i class="ri-external-link-line"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="projects__card">
+                <img src="../assets/img/project-img-5.jpg" alt="Basic Project VueJS" class="projects__img">
+
+                <div class="projects__modal">
+                    <span class="projects__subtitle">Web</span>
+
+                    <h2 class="projects__title">Basic Project VueJS</h2>
+
+                    <a href="https://yuri8k.github.io/basic-design-add-cart-VUEJS/" class="projects__button">
+                        View Demo <i class="ri-external-link-line"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="projects__card">
+                <img src="../assets/img/project-img-6.jpg" alt="Modern Register and Login" class="projects__img">
+
+                <div class="projects__modal">
+                    <span class="projects__subtitle">Web</span>
+
+                    <h2 class="projects__title">Modern Register and Login</h2>
+
+                    <a href="https://yuri8k.github.io/Login-Registration-Form/" class="projects__button">
+                        View Demo <i class="ri-external-link-line"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+</template>
+
+<script>
+export default {
+    name: 'Projects'
+}
+</script>
+
+<style lang="scss">
+    .projects {
+        background-color: var(--conainer-color);
+
+        &__container {
+            row-gap: 2rem;
+            justify-content: center;
+            padding-block: 1rem;
+
+            .projects__card {
+                position: relative;
+                border-radius: 1rem;
+                overflow: hidden;
+
+                &:hover {
+                    .projects__modal {
+                        bottom: 0;
+                    }
+                }
+
+                .projects__img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .projects__modal {
+                    position: absolute;
+                    left: 0;
+                    bottom: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 0%, hsla(var(--hue), 70%, 40%, .8) 120%);
+                    backdrop-filter: blur(4px);
+                    --webkit-backdrop-filter: blur(4px);
+                    border-radius: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    transition: bottom .4s;
+
+                    .projects__subtitle, .projects__button {
+                        color: var(--title-color);
+                        font-size: var(--small-font-size);
+                    }
+
+                    .projects__subtitle {
+                        display: block;
+                        margin-bottom: .25rem;
+                    }
+
+                    .projects__title {
+                        font-size: var(--h2-font-size);
+                        margin-bottom: .75rem;
+                    }
+
+                    .projects__button {
+                        display: flex;
+                        align-content: center;
+                        column-gap: .5rem;
+                        font-weight: var(--font-medium);
+
+                        i {
+                            font-size: 1.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>
