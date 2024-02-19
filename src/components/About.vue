@@ -2,20 +2,18 @@
   <section class="about section" id="about">
     <div class="about__container container grid">
       <div class="about__data">
-        <h3 class="section__subtitle">Minha <span>Intro</span></h3>
+        <h3 class="section__subtitle">My <span>Intro</span></h3>
 
-        <h2 class="section__title">Sobre min</h2>
+        <h2 class="section__title">About Me</h2>
 
         <p class="about__description">
           Como desenvolvedor front-end, minha paixão é criar interfaces de usuário cativantes e
-          funcionais. Com habilidades em sass, javascript, bootstrap, VueJS, entre outros,
+          funcionais. Com habilidades em sass, javascript, VueJS, VueEX, NuxJS entre outros,
           transformo designs em experiências interativas e responsivas. Trabalho em estreita
           colaboração com designers e desenvolvedores back-end para garantir uma integração perfeita
           entre o visual e a funcionalidade dos aplicativos web. Além disso, estou
           sempre atualizado com as mais recentes tecnologias e tendências do setor para oferecer
-          soluções inovadoras que proporcionem uma experiência de usuário excepcional. Com uma
-          abordagem centrada no usuário e uma paixão pela excelência técnica, busco constantemente
-          superar expectativas e entregar resultados de alta qualidade.
+          soluções inovadoras que proporcionem uma experiência de usuário excepcional.
         </p>
 
         <a href="#contact" class="button">contate-me</a>
@@ -83,17 +81,6 @@ export default {
   name: 'About',
   data() {
     return {}
-  },
-  methods: {
-    blurHeader() {
-      const header = document.querySelector('#header')
-      scrollY >= 50
-        ? header.classList.add('blur-header')
-        : header.classList.remove('blur-header')
-    }
-  },
-  created() {
-    addEventListener('scroll', this.blurHeader);
   }
 }
 </script>
@@ -101,12 +88,45 @@ export default {
 <style lang="scss">
 .about__container {
   row-gap: 2.5rem;
+  @media screen and (min-width: 576px) {
+    grid-template-columns: 360px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1152px) {
+    grid-template-columns: 550px 460px;
+    column-gap: 4.5rem;
+    padding-bottom: 1rem;
+  }
 
   .about__data {
     text-align: center;
 
+    @media screen and (min-width: 768px) {
+      text-align: initial;
+      order: 1;
+
+      .section__subtitle, .section__title{
+        text-align: initial;
+      }
+    }
+
     .about__description {
       margin-bottom: 2rem;
+      @media screen and (min-width: 768px) {
+        font-size: 0.85rem;
+      }
+      @media screen and (min-width: 1023px) {
+        font-size: 1rem;
+      }
+      @media screen and (min-width: 1152px) {
+        margin-bottom: 3rem;
+      }
     }
   }
 
@@ -116,6 +136,14 @@ export default {
     .about__blob {
       width: 320px;
 
+      @media screen and (min-width: 768px) {
+        width: 400px;
+      }
+
+      @media screen and (min-width: 1152px) {
+        width: 550px;
+      }
+  
       path {
         stroke: var(--first-color);
       }

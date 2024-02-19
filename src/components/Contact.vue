@@ -25,7 +25,7 @@
         </a>
       </div>
 
-      <form @submit="submitForm" class="contact__form" id="contact--form">
+      <form @submit.prevent="sendEmail" class="contact__form" id="contact--form">
         <div class="contact__group">
             <input type="text" name="user_name" required placeholder="Enter your name" class="contact__input">
             <input type="email" name="user_email" required placeholder="Enter your email" class="contact__input">
@@ -50,18 +50,27 @@ export default {
   name: 'Contact',
   data() {
     return {
-
     }
   },
-  methods: {
-    submitForm() {
-    const   contacForm = document.getElementById('contact--form'),
-            contactMessage = document.getElementById('contact-message')
+  methods: {  
+    sendEmail() {
+      const contactMessage = document.getElementById('contact-message');
+      const contactForm = document.getElementById('contact--form');
 
-        const sendEmail = (e) => {
-            e.preventDefault();
-        }       
-    }
+      emailjs.sendForm('service_bltvn57', 'template_povv9k9', '#contact--form', 'ZZtw7IUkOOJWGDsu6')     
+      .then(() => {
+          contactMessage.textContent = 'Mensagem enviado com sucesso!'
+
+          setTimeout(() => {
+            contactMessage.textContent = ''
+          }, 5000);
+
+          contactForm.reset()
+
+      }, () => {
+          contactMessage.textContent = 'Erro ao enviar a mensagem!'
+      });
+    },
   }
 }
 </script>
@@ -70,6 +79,15 @@ export default {
 .contact {
   &__container {
     padding-top: 1rem;
+    @media screen and (min-width: 576px) {
+      grid-template-columns: 360px;
+      justify-content: center;
+    }
+
+    @media screen and (min-width: 1152px) {
+      grid-template-columns: 680px;
+      padding-block: 2.5rem 2rem;
+    }
 
     .contact__social {
       display: flex;
@@ -96,38 +114,57 @@ export default {
         display: grid;
         row-gap: 1rem;
     } 
+
+    @media screen and (min-width: 1152px) {
+      .contact__group {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+      }
+    }
     
     .contact__form {
-        position: relative;
+      position: relative;
 
-        .contact__input {
-        padding: 1rem 1.25rem;
-        border-radius: .5rem;
-        background-color: var(--container-color);
-        color: var(--title-color);
+      @media screen and (min-width: 1152px) {
+        row-gap: 1.5rem;
+      }
 
-            &::placeholder {
-                color: var(--text-color);
-            }
+      .contact__input {
+      padding: 1rem 1.25rem;
+      border-radius: .5rem;
+      background-color: var(--container-color);
+      color: var(--title-color);
+
+      @media screen and (min-width: 1152px) {
+        padding: 1.5rem;
+      }
+
+        &::placeholder {
+          color: var(--text-color);
         }
+      }
 
         textarea {
-            height: 11rem;
-            resize: none;
-            margin-bottom: 2rem;
+          height: 11rem;
+          resize: none;
+          margin-bottom: 2rem;
+
+          @media screen and (min-width: 1152px) {
+            height: 20rem;
+          }
         }
 
         .contact__message {
-            position: absolute;
-            left: 0;
-            bottom: 4.5rem;
-            font-size: var(--small-font-size);
-            color: var(--title-color);
+          position: absolute;
+          left: 0;
+          bottom: 4.5rem;
+          font-size: var(--small-font-size);
+          color: var(--title-color);
         }
 
         .contact__button {
-            justify-self: center;
-            cursor: pointer;
+          justify-self: center;
+          cursor: pointer;
         }
     }
   }

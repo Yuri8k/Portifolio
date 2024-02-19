@@ -5,6 +5,8 @@ import Skills from '@/components/Skills.vue';
 import Services from '@/components/Services.vue';
 import Projects from '@/components/Projects.vue';
 import Contact from '@/components/Contact.vue';
+import Footer from '@/components/Footer.vue';
+import ScrollUp from '@/components/ScrollUp.vue';
 
 </script>
 
@@ -16,5 +18,7 @@ import Contact from '@/components/Contact.vue';
     <Services />
     <Projects />
     <Contact />
+    <Footer />
+    <ScrollUp />
   </main>
 </template>

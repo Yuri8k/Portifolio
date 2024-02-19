@@ -10,11 +10,7 @@
           <h3 class="home__educatiion">Front-end Developer</h3>
 
           <h3 class="home__description">
-            Desenvolvedor front-end, criação de interfaces de usuário cativantes, funcionais e responsivas, utlizando sass, javascript, bootstrap, VueJS, entre outros.
-            <br><br>
-            Criação do front-end de mais de 50 lojas de e-commerce
-            <br><br>
-            Desenvolvimento de novas funcionalidades
+            Desenvolvedor front-end, criação de interfaces de usuário cativantes, funcionais e responsivas, utlizando sass, javascript, VueJS, entre outros.
           </h3>
 
           <a href="#contact" class="button">Vamos conversar</a>
@@ -100,13 +96,36 @@ main {
     &__container {
       padding-top: 2rem;
       row-gap: 2.5rem;
+      @media screen and (min-width: 576px) {
+        grid-template-columns: 360px;
+        justify-content: center;
+      }
+
+      @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+      }
+
+      @media screen and (min-width: 1152px) {
+        grid-template-columns: 455px 550px;
+        column-gap: 7rem;
+        padding-block: 2rem 3rem;
+      }
 
       .home__content {
         display: grid;
         row-gap: 2rem;
 
+        @media screen and (min-width: 1152px) {
+          row-gap: 4.5rem;
+        }
+
         .home__data {
           text-align: center;
+
+          @media screen and (min-width: 768px) {
+            text-align: initial;
+          }
 
           .home__subtitle,
           .home__educatiion {
@@ -125,6 +144,10 @@ main {
 
           .home__description {
             margin-block: 1rem 1.5rem;
+
+            @media screen and (min-width: 1023px) {
+              margin-block: 1.5rem 2.5rem;
+            }
           }
         }
 
@@ -132,6 +155,14 @@ main {
           display: flex;
           justify-content: center;
           column-gap: 1.25rem;
+
+          @media screen and (min-width: 768px) {
+            justify-content: initial;
+          }
+
+          @media screen and (min-width: 1023px) {
+            column-gap: 1.5rem;
+          }
 
           &-link {
             display: flex;
@@ -156,6 +187,14 @@ main {
           width: 320px;
           fill: var(--first-color);
           filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, 0.2));
+
+          @media screen and (min-width: 768px) {
+            width: 400px;
+          }
+
+          @media screen and (min-width: 1152px) {
+            width: 550px;
+          }
 
           .home__img {
             transform: translateX(-30px);

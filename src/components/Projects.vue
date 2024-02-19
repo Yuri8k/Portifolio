@@ -17,7 +17,7 @@
 
                     <h2 class="projects__title">Modern Animations</h2>
 
-                    <a href="https://yuri8k.github.io/Animation-Effects/?=987123" class="projects__button">
+                    <a target="_blank" href="https://yuri8k.github.io/Animation-Effects/?=987123" class="projects__button">
                         View Demo <i class="ri-external-link-line"></i>
                     </a>
                 </div>
@@ -31,7 +31,7 @@
 
                     <h2 class="projects__title">Basic Project VueJS</h2>
 
-                    <a href="https://yuri8k.github.io/basic-design-add-cart-VUEJS/" class="projects__button">
+                    <a target="_blank" href="https://yuri8k.github.io/basic-design-add-cart-VUEJS/" class="projects__button">
                         View Demo <i class="ri-external-link-line"></i>
                     </a>
                 </div>
@@ -45,7 +45,7 @@
 
                     <h2 class="projects__title">Modern Register and Login</h2>
 
-                    <a href="https://yuri8k.github.io/Login-Registration-Form/" class="projects__button">
+                    <a target="_blank" href="https://yuri8k.github.io/Login-Registration-Form/" class="projects__button">
                         View Demo <i class="ri-external-link-line"></i>
                     </a>
                 </div>
@@ -68,15 +68,33 @@ export default {
             row-gap: 2rem;
             justify-content: center;
             padding-block: 1rem;
+            @media screen and (min-width: 576px) {
+                grid-template-columns: 360px;
+                justify-content: center;
+            }
+
+            @media screen and (min-width: 768px) {
+                grid-template-columns: repeat(2, 352px);
+                align-items: center;
+            }
+
+            @media screen and (min-width: 1023px) {
+                grid-template-columns: repeat(3, 350px);
+                row-gap: 3rem;
+                padding-block: 2.5rem 4rem;
+            }
 
             .projects__card {
                 position: relative;
                 border-radius: 1rem;
                 overflow: hidden;
+                height: 100%;
 
-                &:hover {
-                    .projects__modal {
-                        bottom: 0;
+                @media screen and (min-width: 1023px) {
+                    &:hover {
+                        .projects__modal {
+                            bottom: 0;
+                        }
                     }
                 }
 
@@ -88,7 +106,7 @@ export default {
                 .projects__modal {
                     position: absolute;
                     left: 0;
-                    bottom: -100%;
+                    bottom: 0;
                     width: 100%;
                     height: 100%;
                     background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 0%, hsla(var(--hue), 70%, 40%, .8) 120%);
@@ -100,6 +118,10 @@ export default {
                     align-items: center;
                     justify-content: center;
                     transition: bottom .4s;
+
+                    @media screen and (min-width: 1023px) {
+                        bottom: -100%;
+                    }
 
                     .projects__subtitle, .projects__button {
                         color: var(--title-color);
@@ -121,6 +143,10 @@ export default {
                         align-content: center;
                         column-gap: .5rem;
                         font-weight: var(--font-medium);
+
+                        @media screen and (min-width: 1152px) {
+                            font-size: var(--normal-font-size);
+                        }
 
                         i {
                             font-size: 1.25rem;
