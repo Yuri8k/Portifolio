@@ -11,7 +11,7 @@ node_modules
 .DS_Store
 dist-ssr
 coverage
-index.html
+html
 *.local
 
 /cypress/videos/
