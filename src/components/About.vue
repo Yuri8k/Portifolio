@@ -4,7 +4,7 @@
       <div class="about__data">
         <h3 class="section__subtitle">Minha <span>Intro</span></h3>
 
-        <h2 class="section__title">Sobre  Min</h2>
+        <h2 class="section__title">Sobre  Mim</h2>
 
         <p class="about__description">
           Como desenvolvedor front-end, minha paixão é criar interfaces de usuário cativantes e
