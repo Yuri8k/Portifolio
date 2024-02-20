@@ -22,7 +22,7 @@
                     <li class="skills__item">HTML & SCSS</li>
                     <li class="skills__item">Javascript</li>
                     <li class="skills__item">VueJS</li>
-                    <li class="skills__item">VueEX</li>
+                    <li class="skills__item">VueX</li>
                 </ol>
 
                 <ol class="skills__group" start="5">
