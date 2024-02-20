@@ -2,12 +2,9 @@
     <section class="skills section" id="skills">
         <div class="skills__container container grid">
             <div class="skills__data">
-                <h3 class="section__subtitle">
-                    Minhas <span>Habilidades</span>
-                </h3>
 
                 <h2 class="section__title">
-                    Minhas Habilidades
+                    Minhas <span>Habilidades</span>
                 </h2>
 
                 <p class="skills__description">
@@ -66,8 +63,12 @@
                 @media screen and (min-width: 768px) {
                     text-align: initial;
 
-                    .section__subtitle, .section__title{
+                    .section__title{
                         text-align: initial;
+
+                        span {
+                            color: var(--first-color);
+                        }
                     }
                 }
 
