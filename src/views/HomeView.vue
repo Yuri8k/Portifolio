@@ -1,5 +1,5 @@
 <script setup>
-import Home from '@/components/Home.vue';
+import Start from '@/components/Start.vue';
 import About from '@/components/About.vue';
 import Skills from '@/components/Skills.vue';
 import Services from '@/components/Services.vue';
@@ -12,7 +12,7 @@ import ScrollUp from '@/components/ScrollUp.vue';
 
 <template>
   <main class="main">
-    <Home />
+    <Start />
     <About />
     <Skills />
     <Services />

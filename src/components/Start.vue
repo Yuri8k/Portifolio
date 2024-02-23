@@ -70,7 +70,7 @@
               id="imageBlob"
               width="640"
               height="925"
-              href="../assets/img/Foto-portfolio.png"
+              href="../assets/img/foto-2.png"
             />
           </defs>
         </svg>

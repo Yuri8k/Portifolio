@@ -1,6 +1,7 @@
 <template>
   <div>
     <HeaderVue />
+    <div id="cursor"></div>
     <router-view></router-view>
   </div>
 </template>
@@ -14,7 +15,6 @@ export default {
   },
   methods: {
     animationScroll() {
-
       const sr = ScrollReveal({
         origin: 'top',
         distance: '60px',
@@ -27,10 +27,10 @@ export default {
       sr.reveal(`.about__data, .skills__data`, {origin: 'left' });
       sr.reveal(`.about__image, .skills__content`, {origin: 'right' });
       sr.reveal(`.services__card, .projects__card`, {interval: 100 })
-    }
+    },
   },
   mounted() {
-    this.animationScroll()
+    this.animationScroll();
   }
 }
 </script>
