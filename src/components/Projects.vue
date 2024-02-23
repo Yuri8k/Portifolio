@@ -10,7 +10,7 @@
 
         <div class="projects__container container grid">
             <article class="projects__card">
-                <img src="../assets/img/project-img-1.jpg" alt="Animation Effects" class="projects__img">
+                <img src="../assets/img/project-img-1.png" alt="Animation Effects" class="projects__img">
 
                 <div class="projects__modal">
                     <span class="projects__subtitle">Web</span>
@@ -24,7 +24,7 @@
             </article>
 
             <article class="projects__card">
-                <img src="../assets/img/project-img-5.jpg" alt="Basic Project VueJS" class="projects__img">
+                <img src="../assets/img/project-img-2.png" alt="Basic Project VueJS" class="projects__img">
 
                 <div class="projects__modal">
                     <span class="projects__subtitle">Web</span>
@@ -38,7 +38,7 @@
             </article>
 
             <article class="projects__card">
-                <img src="../assets/img/project-img-6.jpg" alt="Modern Register and Login" class="projects__img">
+                <img src="../assets/img/project-img-3.png" alt="Modern Register and Login" class="projects__img">
 
                 <div class="projects__modal">
                     <span class="projects__subtitle">Web</span>
@@ -90,6 +90,14 @@ export default {
                 overflow: hidden;
                 height: 100%;
 
+                @media screen and (min-width: 1023px) {
+                    &:hover {
+                        .projects__modal {
+                            bottom: 0;
+                        }
+                    }
+                }
+
                 .projects__img {
                     width: 100%;
                     height: 100%;
@@ -110,6 +118,10 @@ export default {
                     align-items: center;
                     justify-content: center;
                     transition: bottom .4s;
+
+                    @media screen and (min-width: 1023px) {
+                        bottom: -100%;
+                    }
 
                     .projects__subtitle, .projects__button {
                         color: var(--title-color);
