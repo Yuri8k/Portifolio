@@ -70,7 +70,7 @@
               id="imageBlob"
               width="640"
               height="925"
-              href="../assets/img/foto-2.png"
+              href="../assets/img/foto-1.png"
             />
           </defs>
         </svg>
@@ -194,10 +194,6 @@ main {
 
           @media screen and (min-width: 1152px) {
             width: 550px;
-          }
-
-          .home__img {
-            transform: translateX(-30px);
           }
         }
       }
