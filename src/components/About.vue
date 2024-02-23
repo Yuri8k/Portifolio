@@ -66,7 +66,7 @@
               id="imageBorder"
               width="640"
               height="940"
-              href="../assets/img/Foto-portfolio.png"
+              href="../assets/img/foto-1.png"
             />
           </defs>
         </svg>
