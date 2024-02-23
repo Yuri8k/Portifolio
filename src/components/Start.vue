@@ -1,5 +1,6 @@
 <template>
   <section class="home section" id="home">
+    <div class="snow"></div>
     <div class="home__container container grid">
       <div class="home__content">
         <div class="home__data">
@@ -92,6 +93,52 @@ export default {
 main {
   .home {
     background: var(--container-color);
+    position: relative;
+    overflow: hidden;
+
+    .snow {
+      &::after, &::before {
+        content: '';
+        position: absolute;
+        top: -650px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(4px 4px at 100px 50px, #fff, transparent),
+        radial-gradient(6px 6px at 200px 150px, #fff, transparent),
+        radial-gradient(3px 3px at 300px 250px, #fff, transparent),
+        radial-gradient(4px 4px at 400px 350px, #fff, transparent),
+        radial-gradient(6px 6px at 500px 100px, #fff, transparent),
+        radial-gradient(3px 3px at 50px 200px, #fff, transparent),
+        radial-gradient(4px 4px at 150px 300px, #fff, transparent),
+        radial-gradient(6px 6px at 250px 400px, #fff, transparent),
+        radial-gradient(3px 3px at 350px 500px, #fff, transparent);
+        background-size: 650px 650px;
+        animation: snowAnimation 8s linear;
+        animation-iteration-count: infinite;
+      }
+
+      &::after {
+        margin-left: -250px;
+        opacity: 0.7;
+        filter: blur(1px);
+        animation-duration: 12s;
+      }
+      &::before {
+        margin-left: -350px;
+        opacity: 1;
+        animation-duration: 15s;
+      }
+
+      @keyframes snowAnimation {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(650px);
+        }
+      }
+    }
 
     &__container {
       padding-top: 2rem;

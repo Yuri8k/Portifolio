@@ -1,7 +1,6 @@
 <template>
   <div>
     <HeaderVue />
-    <div id="cursor"></div>
     <router-view></router-view>
   </div>
 </template>
