@@ -8,7 +8,7 @@
 
         <p class="about__description">
           Como desenvolvedor front-end, minha paixão é criar interfaces de usuário cativantes e
-          funcionais. Com habilidades em sass, javascript, VueJS, VueEX, NuxJS entre outros,
+          funcionais. Com habilidades em sass, javascript, VueJS, VueEX entre outros,
           transformo designs em experiências interativas e responsivas. Trabalho em estreita
           colaboração com designers e desenvolvedores back-end para garantir uma integração perfeita
           entre o visual e a funcionalidade dos aplicativos web. Além disso, estou
