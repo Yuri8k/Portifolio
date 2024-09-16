@@ -38,14 +38,14 @@
             </article>
 
             <article class="projects__card">
-                <img src="../assets/img/project-img-3.png" alt="Modern Register and Login" class="projects__img">
+                <img src="../assets/img/Web Ecommerce.png" alt="Modern Register and Login" class="projects__img">
 
                 <div class="projects__modal">
-                    <span class="projects__subtitle">Web</span>
+                    <span class="projects__subtitle">Andamento</span>
 
-                    <h2 class="projects__title">Registro e Login Moderno</h2>
+                    <h2 class="projects__title">Fake Store API</h2>
 
-                    <a target="_blank" href="https://yuri8k.github.io/Login-Registration-Form/" class="projects__button">
+                    <a target="_blank" href="https://ecommerce-eight-plum-27.vercel.app/" class="projects__button">
                         Ver Projeto <i class="ri-external-link-line"></i>
                     </a>
                 </div>

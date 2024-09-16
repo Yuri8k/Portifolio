@@ -23,9 +23,8 @@
                 </ol>
 
                 <ol class="skills__group" start="5">
-                    <li class="skills__item">VueX</li>
-                    <li class="skills__item">NodeJS</li>
                     <li class="skills__item">Git & GitHub</li>
+                    <li class="skills__item">Estudando React</li>
                 </ol>
             </div>
         </div>
